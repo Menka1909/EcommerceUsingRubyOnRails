@@ -1,0 +1,66 @@
+<h3 style="margin-top: 20px; margin-bottom: 40px">Enter Your Details</h3>
+<div class="row">
+    <div class="col-lg-6" style="margin-bottom: 50px">
+        <%= form_for :post, url: orderConfirm_path do |f| %><%= csrf_meta_tags %>
+            
+            <%= f.label :Name %><br>
+            <%= f.text_field(:Name, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :Phone %><br>
+            <%= f.text_field(:Phone, {:class => 'form-control', :required => true }) %>
+
+            <%= f.label :Email %><br>
+            <%= f.text_field(:Email, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :AddressLine1 %><br>
+            <%= f.text_area(:AddressLine1, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :AddressLine2 %><br>
+            <%= f.text_area(:AddressLine2, {:class => 'form-control', :required => true}) %>
+        
+            <%= f.label :City %><br>
+            <%= f.text_field(:City, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :State %><br>
+            <%= f.text_field(:State, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :Country %><br>
+            <%= f.text_field(:Country, {:class => 'form-control', :required => true}) %>
+
+            <%= f.label :Pin %><br>
+            <%= f.text_field(:Pin, {:class => 'form-control' , :required => true}) %>
+
+            <%= f.label :Quantity %><br>
+            <%= f.select(:Quantity, [ '1', '2', '3', '4', '5' ], {:class => 'form-control', :required => true})%><br><br>
+
+            <% @product.each do |product_detail| %>
+                <%= f.hidden_field :ProductName, value: product_detail.ProductName %>
+                <%= f.hidden_field :ProductDetail, value: product_detail.ProductDetail %>
+                <%= f.hidden_field :Mrp, value: product_detail.Mrp %>
+                <%= f.hidden_field :Discount, value: product_detail.Discount %>
+                <%= f.hidden_field :Tax, value: product_detail.Tax %>
+                <%= f.hidden_field :NetPrice, value: product_detail.NetPrice %>
+                <%= f.hidden_field :Sku, value: product_detail.Sku %>
+            <% end %>
+            <%= f.submit ({ :class => 'btn btn-primary'}) %>
+
+        <% end %>
+    </div>
+
+    <div class="col-lg-6">
+        <div class="card" style="width: 20rem;">
+            <div class="card-body">
+            <h3>Item :-</h3>
+            <% @product.each do |product_detail| %>
+                <h5 class="card-title"><%= product_detail.ProductName %></h5>
+                <p class="card-text">Detail : <%= product_detail.ProductDetail %></p>
+                <p class="card-text">MRP : <%= product_detail.Mrp %> RS.</p>
+                <p class="card-text">Tax : <%= product_detail.Tax %></p>
+                <p class="card-text">Discount : <%= product_detail.Discount %></p>
+                <p class="card-text">Net Price : <%= product_detail.NetPrice %> RS.</p>    
+            <% end %>    
+        
+            </div>
+        </div>
+    </div>
+</div>

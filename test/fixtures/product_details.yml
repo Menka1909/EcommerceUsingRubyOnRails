@@ -1,0 +1,19 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ProductName: MyString
+  ProductDetail: MyText
+  Mrp: 1.5
+  Discount: 1.5
+  Tax: 1.5
+  NetPrice: 1.5
+  Sku: 1
+
+two:
+  ProductName: MyString
+  ProductDetail: MyText
+  Mrp: 1.5
+  Discount: 1.5
+  Tax: 1.5
+  NetPrice: 1.5
+  Sku: 1

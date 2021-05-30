@@ -1,0 +1,35 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Name: MyString
+  Phone: 1
+  Email: MyText
+  AddressLine1: MyText
+  AddressLine2: MyText
+  State: MyText
+  City: MyText
+  Country: MyText
+  ProductName: MyText
+  ProductDetail: MyText
+  Sku: 1
+  Mrp: 1.5
+  Quantity: 1
+  Discount: 1.5
+  NetPrice: 1.5
+
+two:
+  Name: MyString
+  Phone: 1
+  Email: MyText
+  AddressLine1: MyText
+  AddressLine2: MyText
+  State: MyText
+  City: MyText
+  Country: MyText
+  ProductName: MyText
+  ProductDetail: MyText
+  Sku: 1
+  Mrp: 1.5
+  Quantity: 1
+  Discount: 1.5
+  NetPrice: 1.5

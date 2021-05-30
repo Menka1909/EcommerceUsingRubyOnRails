@@ -1,0 +1,16 @@
+<h1 class="text-center" style="margin-top: 30px">Shopping</h1>
+
+<div class="row" style="margin-top: 50px">
+    <% @details_of_product.each do |detail| %>
+    <div class="col-lg-4">
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+            <h5 class="card-title"><%= detail.ProductName %></h5>
+            <p class="card-text"><%= detail.ProductDetail %></p>
+            <p class="card-text">RS. <%= detail.Mrp %></p>
+            <%= link_to "Buy Now", buyNowForm_path(:product_id => detail.id) %></a>
+            </div>
+        </div>
+    </div>  
+    <% end %>
+</div>

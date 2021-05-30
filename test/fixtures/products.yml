@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  Sku: 1
+  Mrp: 1.5
+  Quantity: 1
+  Discount: 1.5
+  NetPrice: 1.5
+  order_id: 1
+
+two:
+  Sku: 1
+  Mrp: 1.5
+  Quantity: 1
+  Discount: 1.5
+  NetPrice: 1.5
+  order_id: 1

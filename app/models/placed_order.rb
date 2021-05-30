@@ -1,0 +1,2 @@
+class PlacedOrder < ApplicationRecord
+end
